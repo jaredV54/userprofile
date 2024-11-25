@@ -1,0 +1,154 @@
+#login_container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    gap: 80px;
+}
+
+/* Brand / Logo*/
+
+.branding {
+    width: 450px;
+}
+
+.branding > h1 {
+    font-family: "MuseoModerno";
+    color: var(--black);
+    font-weight: 400;
+    font-size: 5.36rem;
+    text-align: right;
+    position: relative;
+}
+
+.logo {
+    width: 200px;
+    position: absolute;
+    left: -97px;
+    top: -48px;
+    z-index: 1;
+}
+
+.branding p {
+    color: var(--black-gray);
+    font-weight: 500;
+    font-family: "Poppins";
+    font-size: 1.19rem;
+    padding: 0 5px;
+    transform: translateY(-10px);
+}
+
+/* Form */
+
+.login-box {
+    width: 450px; 
+    height: auto;
+    padding: 40px;
+    font-family: "Poppins";
+}
+
+.login-box label {
+    display: block;
+    font-size: .9rem;
+}
+
+.password {
+    margin-top: 10px;
+}
+
+input.login_input {
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 2px solid transparent; 
+    font-family: "Poppins";
+    font-size: 0.9rem;
+    color: var(--black);
+    font-weight: 500;
+    background-image: linear-gradient(to right, var(--purple), var(--black-gray), var(--black));
+    background-repeat: no-repeat;
+    z-index: 2;
+    background-size: 100% 2px;
+    background-position: 0 100%; 
+}
+
+button.bttn_login {
+    width: 100%;
+    border-radius: 40px;
+    color: var(--white);
+    font-family: "Poppins";
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: .9rem;
+    height: 40px;
+    box-shadow: 2px 2px 3px var(--gray-transparent);
+}
+
+.login-button {
+    margin: 20px 0 10px;
+    background: linear-gradient(to right, var(--purple), var(--blue), var(--black-gray));
+}
+
+.create-account-button {
+    margin-top: 40px;
+    background: linear-gradient(to right, var(--black), var(--gray));
+}
+
+a.forgot-password {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--black);
+    font-size: .8rem;
+    margin-top: 5px;
+    position: relative;
+}
+
+a.forgot-password::after {
+    content: "";
+    width: 80%;
+    height: .01rem;
+    background-color: var(--gray-transparent);
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -15px;
+}
+
+/* Footer */
+
+footer {
+    position: fixed;
+    bottom: 10%;
+    font-family: "Poppins";
+    font-size: .85rem;
+    width: 100%;
+    color: var(--black);
+    z-index: 2;
+}
+
+footer ul {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+footer ul li {
+    cursor: pointer;
+    list-style: none;
+    font-size: 500;
+}

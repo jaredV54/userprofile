@@ -1,0 +1,44 @@
+.notification {
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    color: var(--white);
+    border: 2px solid var(--white);
+    z-index: 2000;
+    animation: slideInOut 3.6s ease;
+}
+
+@keyframes slideInOut {
+    0% {
+        transform: translateX(calc(-50% - 100px));
+        opacity: 0;
+    }
+    12.5% {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+    87.5% {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(calc(-50% + 100px));
+        opacity: 0;
+    }
+}
+
+.message_notification {
+    background-color: var(--matte-black);
+}
+
+.error_notification {
+    background-color: var(--dark-green);
+}
+
+.success_notification {
+    background-color: var(--white);
+    color: var(--matte-black);
+}
