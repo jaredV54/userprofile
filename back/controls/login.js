@@ -5,7 +5,6 @@ import bcrypt from 'bcrypt';
 import { logInValidation } from "../utils/logInValidation.js";
 dotenv.config();
 
-// Logout route in Express
 export const logoutUser = (req, res) => {
     res.clearCookie('auth_token', { httpOnly: true, secure: true, sameSite: 'Strict' });
     res.clearCookie('refresh_token', { httpOnly: true, secure: true, sameSite: 'Strict' });
@@ -57,13 +56,13 @@ export const userLogin = (req, res) => {
 
           res.cookie('auth_token', accessToken, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === 'production', // Ensure this is true in production (HTTPS only)
+            secure: process.env.NODE_ENV === 'production', 
             sameSite: 'Strict'
           });
 
           res.cookie('refresh_token', refreshToken, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === 'production', // Ensure this is true in production (HTTPS only)
+            secure: process.env.NODE_ENV === 'production', 
             sameSite: 'Strict'
           });
 
@@ -163,7 +162,7 @@ export const refreshToken = (req, res) => {
 
     res.cookie('auth_token', accessToken, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production', // Ensure this is true in production (HTTPS only)
+      secure: process.env.NODE_ENV === 'production', 
       sameSite: 'Strict'
     });
 

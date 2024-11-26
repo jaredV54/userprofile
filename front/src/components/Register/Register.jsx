@@ -47,7 +47,7 @@ const Register = () => {
           <section>
             <h3>Personal Info</h3>
 
-            <label htmlFor="first_name">First Name:</label>
+            <label htmlFor="first_name">First Name: <span>{inputErrors.firstname}</span></label>
             <input
               type="text"
               id="first_name"
@@ -55,7 +55,7 @@ const Register = () => {
               onChange={handleInputChange(updateBasicInfo, 'firstname')}
             />
 
-            <label htmlFor="middle_name">Middle Name: <span>(optional)</span></label>
+            <label htmlFor="middle_name">Middle Name: <span>(optional)</span> <span>{inputErrors.middlename}</span></label>
             <input
               type="text"
               id="middle_name"
@@ -63,7 +63,7 @@ const Register = () => {
               onChange={handleInputChange(updateBasicInfo, 'middlename')}
             />
 
-            <label htmlFor="last_name">Last Name:</label>
+            <label htmlFor="last_name">Last Name: <span>{inputErrors.lastname}</span></label>
             <input
               type="text"
               id="last_name"
@@ -71,7 +71,7 @@ const Register = () => {
               onChange={handleInputChange(updateBasicInfo, 'lastname')}
             />
 
-            <label htmlFor="gender">Gender:</label>
+            <label htmlFor="gender">Gender: <span>{inputErrors.gender}</span></label>
             <div>
               <button
                 type="button"
@@ -96,7 +96,7 @@ const Register = () => {
               </button>
             </div>
 
-            <label htmlFor="date_of_birth">Date of Birth:</label>
+            <label htmlFor="date_of_birth">Date of Birth: <span>{inputErrors.birthday}</span></label>
             <input
               type="date"
               id="date_of_birth"
@@ -109,7 +109,7 @@ const Register = () => {
           <section>
             <h3>Account Credentials</h3>
 
-            <label htmlFor="username">Username:</label>
+            <label htmlFor="username">Username: <span>{inputErrors.username}</span></label>
             <input
               type="text"
               id="username"
@@ -117,7 +117,7 @@ const Register = () => {
               onChange={handleInputChange(updateCredentials, 'username')}
             />
 
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email">Email: <span>{inputErrors.email}</span></label>
             <input
               type="email"
               id="email"
@@ -125,7 +125,7 @@ const Register = () => {
               onChange={handleInputChange(updateCredentials, 'email')}
             />
 
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password">Password: <span>{inputErrors.password}</span></label>
             <input
               type="password"
               id="password"
@@ -133,7 +133,7 @@ const Register = () => {
               onChange={handleInputChange(updateCredentials, 'password')}
             />
 
-            <label htmlFor="confirmPassword">Confirm Password:</label>
+            <label htmlFor="confirmPassword">Confirm Password: <span>{inputErrors.confirm_password}</span></label>
             <input
               type="password"
               id="confirmPassword"

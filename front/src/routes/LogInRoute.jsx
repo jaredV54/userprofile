@@ -5,6 +5,8 @@ import "../styles/ui/glass.css";
 import Logo from "../assets/images/Logo.png";
 import { useApiResponse } from '../hooks/useApiResonse';
 import { loginApi } from '../api/handleLogin';
+import { Notif } from '../components/ui/Notif';
+import { FilteredBG } from '../components/ui/FilteredBG';
 
 const LogInRoute = ({ values, setValues }) => {
     const navigate = useNavigate();
@@ -31,6 +33,8 @@ const LogInRoute = ({ values, setValues }) => {
 
     return (
     <>
+    <FilteredBG optionNo={1} />
+    <Notif notifMessage={notifMessage} setNotifMessage={setNotifMessage} />
     <div id="login_container">
             <div className="branding">
                 <h1>
@@ -42,7 +46,7 @@ const LogInRoute = ({ values, setValues }) => {
 
         <div className="login-box glass">
             <form>
-                <label htmlFor="email">Email:</label>
+                <label htmlFor="email">Email: <span>{inputErrors.email}</span></label>
                 <input
                   className="login_input"
                   type="email"
@@ -53,7 +57,7 @@ const LogInRoute = ({ values, setValues }) => {
                   onChange={handleInputChange}
                 />
 
-                <label htmlFor="password" className="password">Password:</label>
+                <label htmlFor="password" className="password">Password: <span>{inputErrors.password}</span></label>
                 <input
                   className="login_input"
                   type="password"
