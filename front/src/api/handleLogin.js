@@ -25,3 +25,17 @@ export const loginApi = (req) => {
       }
     })
 };
+export const logoutApi = async (navigate) => {
+    try {
+      const response = await axios.post(`${Config.Configuration.database}/logout`, {}, { withCredentials: true });
+
+      if (response.status === 200) {
+        navigate('/');
+      } else {
+        console.log('Error logging out');
+      }
+    } catch (error) {
+      console.error('Logout failed', error);
+      console.log('Logout failed', error);
+    }
+};

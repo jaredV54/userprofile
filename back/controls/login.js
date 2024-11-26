@@ -5,6 +5,13 @@ import bcrypt from 'bcrypt';
 import { logInValidation } from "../utils/logInValidation.js";
 dotenv.config();
 
+// Logout route in Express
+export const logoutUser = (req, res) => {
+    res.clearCookie('auth_token', { httpOnly: true, secure: true, sameSite: 'Strict' });
+    res.clearCookie('refresh_token', { httpOnly: true, secure: true, sameSite: 'Strict' });
+    res.status(200).json({ message: 'Logged out successfully' });
+};  
+
 const generateAccessToken = (user) => {
   return jwt.sign({ 
     userId: user.id, 
