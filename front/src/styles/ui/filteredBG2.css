@@ -1,0 +1,87 @@
+.bx_container {
+    height: 100svh;
+    width: calc(97% - 250px);
+    position: absolute;
+    left: 250px;
+    height: 91%;
+}
+
+.bx1r {
+    width: 2px;
+    height: 100%;
+    background-color: var(--black);
+    position: absolute;
+    top: -10%;
+    margin-left: 1%;
+}
+
+.bx1r::after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-color: var(--black);
+    position: absolute;
+    overflow: visible;
+    right: -4px;
+    bottom: -6px
+}
+
+.bx2r {
+    width: 95%;
+    height: 2px;
+    background-color: var(--black);
+    position: absolute;
+    bottom: 0;
+    left: -250px;
+}
+
+.bx2r::after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-color: var(--black);
+    position: absolute;
+    overflow: visible;
+    right: -4px;
+    bottom: -4px
+}
+
+.bx3r {
+    width: 2px;
+    height: 95%;
+    background-color: var(--black);
+    position: absolute;
+    bottom: -15%;
+    right: 3px;
+}
+
+.bx3r::after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-color: var(--black);
+    position: absolute;
+    overflow: visible;
+    right: -4px;
+    top: -6px
+}
+
+.bx4r {
+    width: 95%;
+    height: 2px;
+    background-color: var(--black);
+    position: absolute;
+    top: 5%;
+    right: -4%;
+}
+
+.bx4r::after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-color: var(--black);
+    position: absolute;
+    overflow: visible;
+    left: -4px;
+    bottom: -4px
+}

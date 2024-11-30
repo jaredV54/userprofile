@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css';
 import RegisterRoute from './routes/RegisterRoute';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import useAuth from './hooks/useAuth';
 import LogInRoute from './routes/LogInRoute';
-import UserProfileRoute from './routes/UserProfileRoute';
+import HomeRoute from './routes/HomeRoute';
+import ProfileRoute from './routes/ProfileRoute';
+import 'boxicons/css/boxicons.min.css';
 
 const AuthenticatedRoutes = ({ values }) => {
   const navigate = useNavigate();
@@ -20,7 +22,8 @@ const AuthenticatedRoutes = ({ values }) => {
 
   return (
     <Routes>
-      <Route path='/userprofile' element={<UserProfileRoute userId={user.userId} />} />
+      <Route path='/home' element={<HomeRoute user={user} />} />
+      <Route path='/profile' element={<ProfileRoute user={user} />} />
     </Routes>
   );
 };

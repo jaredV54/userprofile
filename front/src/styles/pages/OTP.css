@@ -1,0 +1,78 @@
+.form_container_otp {
+    color: var(--black);
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    gap: 10px !important;
+    width: 440px;
+}
+
+.form_container_otp h3 {
+    font-family: "MuseoModerno";
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.OTP_input_fields {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.OTP_input_fields input.OTP_input_fields_input {
+    width: 45px;
+    height: 45px;
+    font-weight: 600;
+    outline: none;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: "Poppins";
+    color: var(--blue);
+    border: 2px solid var(--white);
+    border-radius: 5px;
+}
+
+.OTP_input_fields input:focus {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.OTP_input_fields input::placeholder {
+    color: var(--gray);
+}
+
+.OTP_bttns {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.OTP_bttns button {
+    font-family: "Poppins";
+    font-size: 1rem;
+    font-weight: 500;
+    height: 30px;
+    width: 180px;
+    outline: none;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.OTP_bttns button:last-child {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.form_container_otp p a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.OTP_bttn_proceed {
+    width: 100% !important;
+}

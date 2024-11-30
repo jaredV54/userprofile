@@ -10,7 +10,8 @@ export const useApiResponse = () => {
     last_name: "",
     middle_name: "",
     gender: "",
-    birthday: ""
+    birthday: "",
+    file_size: "",
   });
 
   const [notifMessage, setNotifMessage] = useState({

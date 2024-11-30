@@ -4,11 +4,12 @@
     padding: 5px 10px;
     position: absolute;
     top: 30px;
+    font-family: "Poppins";
     left: 50%;
     color: var(--white);
     border: 2px solid var(--white);
     z-index: 2000;
-    animation: slideInOut 3.6s ease;
+    animation: slideInOut 3.6s cubic-bezier(.17,.67,.21,1.48);
 }
 
 @keyframes slideInOut {
@@ -31,14 +32,16 @@
 }
 
 .message_notification {
-    background-color: var(--matte-black);
+    background-color: var(--black);
+    color: var(--white);
 }
 
 .error_notification {
-    background-color: var(--dark-green);
+    background-color: var(--orange);
+    color: var(--white);
 }
 
 .success_notification {
-    background-color: var(--white);
-    color: var(--matte-black);
+    background-color: var(--blue);
+    color: var(--white);
 }

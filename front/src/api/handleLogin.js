@@ -11,7 +11,7 @@ export const loginApi = (req) => {
     .then((res) => {
       if (res.data) {
         if (res.data.success || res.status === 200) {
-          navigate('/userprofile');
+          navigate('/home');
         }
       }
     })

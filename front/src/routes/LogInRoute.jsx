@@ -76,7 +76,7 @@ const LogInRoute = ({ values, setValues }) => {
                   className="create-account-button bttn_login"
                   onClick={() => navigate("/register")}
                 >
-                  Create new account
+                  Register
                 </button>
             </form>
         </div>

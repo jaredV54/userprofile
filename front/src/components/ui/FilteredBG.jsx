@@ -43,7 +43,21 @@ const LoginBg = () => {
 const RegisterBg = () => {
   return (
     <>
-      <div></div>
+    <div className='miniBx1_container_r'>
+      <div className='min2_1'></div>
+      <div className='min2_2'></div>
+      </div>
+      <div className='miniBx2_container_r'>
+        <div className='min2_1'></div>
+        <div className='min2_2'></div>
+      </div>
+
+      <div className='bx_container'>
+        <div className='bx1r'></div>
+        <div className='bx2r'></div>
+        <div className='bx3r'></div>
+        <div className='bx4r'></div>
+      </div>
     </>
   )
 }

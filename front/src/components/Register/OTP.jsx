@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useRef } from 'react';
 import { verifyEmailApi, verifyOTPApi } from '../../api/handleRegister';
 import ChooseBttn from '../ui/ChooseBttn';
-
+import "../../styles/pages/OTP.css"
 const moveFocusTo = (e, inputRefs, index) => {
     const prevInputRef = inputRefs.current[index - 1];
     const nextInputRef = inputRefs.current[index + 1];
@@ -55,22 +55,21 @@ const OTPverification = ({ navigate, email, setOTP, user, OTP, setNotifMessage, 
 
     return (
         <>
-            <div className='form_container otp_verification'>
+            <div className='form_container_otp otp_verification glass'>
                 {OTP.registered ? (<>
-                    <h1>Registered</h1>
+                    <h3>Registered</h3>
                     <p>New user registed successfully</p>
-                    <ChooseBttn 
-                      singleBttn={true} 
-                      singleBttnLabel={"Proceed"}
-                      singleBttnFunc={() => navigate("/")}
-                    />
+                    <div className='OTP_bttns'>
+                        <button className='OTP_bttn_proceed' type='button' onClick={() => navigate("/")}>Proceed</button>
+                    </div>
                 </>) : (<>
-                    <h1>OTP Verification</h1>
+                    <h3>OTP Verification</h3>
                     <p>Please enter the code we have sent to your email "{email}"</p>
                     <div className="OTP_input_fields">
                     {otpCode.map((digit, index) => {
                         return (
                         <input
+                        className='OTP_input_fields_input'
                             key={index}
                             placeholder='-'
                             type="tel"
@@ -84,13 +83,10 @@ const OTPverification = ({ navigate, email, setOTP, user, OTP, setNotifMessage, 
                     })}
                     </div>
                     <p>Didn't receive the code? <a href="" onClick={handleSendNewVerificationCode}>Resend</a></p>
-                    <ChooseBttn 
-                        doubleBttn={true}
-                        leftBttnLabel={"Clear"} 
-                        rightBttnLabel={"Verify"} 
-                        leftBttnFunc={() => setOtpCode(['', '', '', '', '', ''])} 
-                        rightBttnFunc={handleVerifyOTP} 
-                    />
+                    <div className='OTP_bttns'>
+                        <button type='button' onClick={() => setOtpCode(['', '', '', '', '', ''])}>Clear</button>
+                        <button type='button' onClick={handleVerifyOTP}>Verify</button>
+                    </div>
                 </>)}
             </div>
         </>

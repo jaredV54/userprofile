@@ -109,7 +109,7 @@ export const verifyToken = (req, res) => {
     const userId = decoded.userId;
 
     const getUserQuery = `
-      SELECT c.id, b.firstname, b.lastname, b.middlename 
+      SELECT c.id, b.firstname, b.lastname, b.middlename, c.username, c.userId 
       FROM user_credentials c 
       JOIN user_basic_info b ON c.userId = b.id 
       WHERE c.id = ?;
@@ -121,13 +121,16 @@ export const verifyToken = (req, res) => {
         return res.status(500).json({ message: "Internal server error" });
       }
 
+      
       if (userData.length > 0) {
         const user = userData[0];
         return res.json({ 
-          userId: user.id, 
+          id: user.id,
+          userId: user.userId, 
           firstName: user.firstname, 
           lastname: user.lastname,
-          middlename: user.middlename 
+          middlename: user.middlename,
+          username: user.username
         });
       } else {
         return res.status(404).json({ message: "User not found" });
